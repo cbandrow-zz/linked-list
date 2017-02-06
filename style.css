@@ -3,3 +3,15 @@
 *{
   font-family: "Open Sans", sans-serif;
 }
+
+#input-side{
+  background-color: #455a64;
+  width: 50%;
+  float: left;
+
+}
+#display-side{
+  background-color: #cfd8dc;
+  width: 50%;
+  float: right;
+}
