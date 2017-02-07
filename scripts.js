@@ -27,11 +27,28 @@ function submitData (){
   //Get Data First
   var webTitle = $('#web-title').val();
   var webAddress = $('#web-address').val();
+  var noWww = webAddress.includes("www");;
+  var noHttp = webAddress.includes("http://");
+  console.log(noWww, noHttp);
+
+  if (noWww === false && noHttp === false){
+    var address = "http://" + "www." + webAddress;
+  } else if (noWww === true && noHttp === true){
+    var address = webAddress;
+  } else if (noWww === false){
+    var address = "www." + webAddress;
+    var address = webAddress.replace("http://", "http://www.")
+  } else if (noHttp === false){
+    var address = "http://" + webAddress;
+  }
+
+
   console.log(webTitle + webAddress);
 
   //Then append with div + data
-  $('#display-side').prepend("<div class='bookmarks'><h2>" + webTitle + "</h2><hr><a href='http://"+ webAddress +"'>" + webAddress + "</a><hr><button class='read'>Read</button><button class='delete'>Delete</button></div>");
+  $('#display-side').append("<div class='bookmarks'><h2>" + webTitle + "</h2><hr><a href='"+ address +"'>" + address + "</a><hr><button class='read'>Read</button><button class='delete'>Delete</button></div>");
 }
+
 
 
 // $('#enter-button').on('click', function () {
