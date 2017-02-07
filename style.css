@@ -25,6 +25,20 @@ header{
   padding-top: 150px;
 }
 
+.bookmarks {
+  background-color: #ffffff;
+  display: block;
+  margin: 10px auto 0 auto;
+  border: solid 1px #607d8b;
+  width: 90%;
+}
+
+.bookmarks hr {
+  color: #cfd8dc;
+  width: 375px;
+  size: 1px;
+}
+
 input {
   display: block;
   width: 400px;
@@ -51,8 +65,30 @@ h1 img {
   vertical-align: middle;
 }
 
+h2{
+  margin-left: 25px;
+  color: #455A64;
+  font-weight: 800;
+}
+
+a {
+  color: #607d8b;
+  margin-left: 25px;
+  font-weight: 400;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #f2f4f4;
+}
+
+a:hover{
+  font-weight: 800;
+  color: #455A64;
+  text-decoration: underline;
+  -moz-text-decoration-color: #FFC107; /* Code for Firefox */
+  -webkit-text-decoration-color: #FFC107;
+}
+
 #enter-button {
-  background: #ffc107;
+  background: #FFC107;
   color: #FFFFFF;
   border-style: none;
   display: block;
@@ -67,11 +103,10 @@ h1 img {
   background: #ffd773;
 }
 
+#enter-button:active {
+  background: #fccb5a;
+}
 
-
-.bookmarks {
-  display: block;
-  margin: 10px auto 0 auto;
-  border: solid 1px #607d8b;
-  width: 90%;
+#enter-button:focus {
+  outline: none;
 }
