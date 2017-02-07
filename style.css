@@ -31,11 +31,12 @@ header{
   margin: 10px auto 0 auto;
   border: solid 1px #607d8b;
   width: 90%;
+  /*height: 150px;*/
 }
 
 .bookmarks hr {
   color: #cfd8dc;
-  width: 375px;
+  width: 86%;
   size: 1px;
 }
 
