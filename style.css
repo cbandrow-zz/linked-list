@@ -5,13 +5,13 @@
 }
 
 #input-side{
-  background-color: #455a64;
+  background-color: #455A64;
   width: 50%;
   float: left;
 
 }
 #display-side{
-  background-color: #cfd8dc;
+  background-color: #CFD8DC;
   width: 50%;
   float: right;
 }
@@ -27,8 +27,23 @@ h1 img {
   vertical-align: middle;
 }
 
+h2 {
+  color: #455A64;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+a {
+  display: table-cell;
+  color: #607D8B;
+  text-decoration: none;
+  border-bottom: solid 2px #F2F4F4;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 #enter-button {
-  background: #ffc107;
+  background: #FFC107;
   color: #FFFFFF;
   border-style: none;
   display: block;
@@ -40,7 +55,7 @@ h1 img {
 }
 
 #enter-button:hover {
-  background: #ffd773;
+  background: #FFD773;
 }
 
 input {
@@ -52,9 +67,39 @@ input {
   letter-spacing: 1px;
 }
 
-.bookmarks {
+.bookmark {
   display: block;
   margin: 10px auto 0 auto;
-  border: solid 1px #607d8b;
+  border: solid 1px #607D8B;
   width: 90%;
+  background: #FFFFFF;
+  padding: 10px;
+}
+
+#bottom-bookmark {
+  margin-bottom: 10px;
+}
+
+.read, .delete {
+  padding: 0px;
+  background: none;
+  border: none;
+  border-bottom: solid 2px #F2F4F4;
+  color: #455A64;
+}
+
+.delete {
+  float: right;
+}
+
+.read-bookmark {
+  background: #F2F4F4;
+}
+
+.read-link {
+  border-bottom: solid 2px #CFD8DC;
+}
+
+.read-button {
+   color: #F05A28;
 }
