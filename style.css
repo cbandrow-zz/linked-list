@@ -28,7 +28,7 @@ header{
 .bookmarks {
   background-color: #ffffff;
   display: block;
-  margin: 10px auto 0 auto;
+  margin: 10px auto 10px auto;
   border: solid 1px #607d8b;
   width: 90%;
   /*height: 150px;*/
