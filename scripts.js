@@ -30,7 +30,7 @@ function submitData (){
   console.log(webTitle + webAddress);
 
   //Then append with div + data
-  $('#display-side').prepend("<div class='bookmarks'><h2>" + webTitle + "</h2><hr><a href="+ webAddress +">" + webAddress + "</a><hr><button class='read'>Read</button><button class='delete'>Delete</button></div>");
+  $('#display-side').prepend("<div class='bookmarks'><h2>" + webTitle + "</h2><hr><a href='http://"+ webAddress +"'>" + webAddress + "</a><hr><button class='read'>Read</button><button class='delete'>Delete</button></div>");
 }
 
 
