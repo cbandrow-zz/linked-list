@@ -9,13 +9,13 @@ section {
 }
 
 #input-side{
-  background-color: #455a64;
+  background-color: #455A64;
   width: 50%;
   float: left;
 
 }
 #display-side{
-  background-color: #cfd8dc;
+  background-color: #CFD8DC;
   width: 50%;
   float: right;
 }
@@ -66,26 +66,27 @@ h1 img {
   vertical-align: middle;
 }
 
-h2{
-  margin-left: 25px;
+h2 {
   color: #455A64;
-  font-weight: 800;
+  font-weight: 400;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 a {
-  color: #607d8b;
-  margin-left: 25px;
-  font-weight: 400;
-  text-decoration: underline;
-  -webkit-text-decoration-color: #f2f4f4;
+  display: table-cell;
+  color: #607D8B;
+  text-decoration: none;
+  border-bottom: solid 2px #F2F4F4;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 a:hover{
   font-weight: 800;
   color: #455A64;
   text-decoration: underline;
-  -moz-text-decoration-color: #FFC107; /* Code for Firefox */
-  -webkit-text-decoration-color: #FFC107;
+  border-bottom: solid 3px #FFC107;
 }
 
 #enter-button {
@@ -101,7 +102,7 @@ a:hover{
 }
 
 #enter-button:hover {
-  background: #ffd773;
+  background: #FFD773;
 }
 
 #enter-button:active {
@@ -110,4 +111,32 @@ a:hover{
 
 #enter-button:focus {
   outline: none;
+}
+
+#bottom-bookmark {
+  margin-bottom: 10px;
+}
+
+.read .delete {
+  padding: 0px;
+  background: none;
+  border: none;
+  border-bottom: solid 2px #F2F4F4;
+  color: #455A64;
+}
+
+.delete {
+  float: right;
+}
+
+.read-bookmark {
+  background: #F2F4F4;
+}
+
+.read-link {
+  border-bottom: solid 2px #CFD8DC;
+}
+
+.read-button {
+   color: #F05A28;
 }

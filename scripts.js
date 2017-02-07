@@ -10,7 +10,6 @@
 //on click, create new div element with .HTML.
 //within each element, append the div to store name and website
 
-
 // ---Creates a DIV and adds data-----//
 $('#enter-button').on('click', function (event) {
   console.log(event.target.id);
@@ -53,27 +52,29 @@ function evalAddress() {
   } else if (noHttp === false){
     var address = "http://" + webAddress;
   }
-  return address
 }
 
+//Code for Read buttons
+$('#read-button-1').on('click', function () {
+  $('#read-button-1').parent().toggleClass('read-bookmark');
+  $('#a-1').toggleClass('read-link');
+  $('#read-button-1').toggleClass('read-button');
+});
 
+$('#read-button-2').on('click', function () {
+  $('#read-button-2').parent().toggleClass('read-bookmark');
+  $('#a-2').toggleClass('read-link');
+  $('#read-button-2').toggleClass('read-button');
+});
 
-// $('#enter-button').on('click', function () {
-//   var num = 0;
-//   var pressCounter;
-//   var newEntry;
-//   num += 1;
-//   pressCounter = num.toString();
-//   newEntry = "count" + pressCounter;
-//   console.log(newEntry);
-//   var webTitle = $('#web-title').val();
-//   var webAddress = $('#web-address').val();
-//   $('#display-side').append("<div class ='bookmarks' id =" + newEntry +"></div>");
-//   $('#'+ newEntry).append("<h2>" + webTitle + "</h2>");
-//   $('#'+ newEntry).append("<hr>");
-//   $('#'+ newEntry).append("<a>" + webAddress + "</a>");
-//   $('#'+ newEntry).append("<hr>");
-//   $('#'+ newEntry).append("<button class='read'>Read</button>");
-//   $('#'+ newEntry).append("<button class='delete'>Delete</button>");
-//   console.log(webTitle);
-// });
+$('#read-button-3').on('click', function () {
+  $('#read-button-3').parent().toggleClass('read-bookmark');
+  $('#a-3').toggleClass('read-link');
+  $('#read-button-3').toggleClass('read-button');
+});
+
+$('#read-button-4').on('click', function () {
+  $('#read-button-4').parent().toggleClass('read-bookmark');
+  $('#a-4').toggleClass('read-link');
+  $('#read-button-4').toggleClass('read-button');
+});
