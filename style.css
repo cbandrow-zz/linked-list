@@ -74,6 +74,13 @@ h2 {
   margin-left: 5%;
 }
 
+h3{
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
 a {
   display: inline-block;
   color: #607D8B;
@@ -131,7 +138,7 @@ a:hover{
   border: none;
   border-bottom: solid 2px #F2F4F4;
   color: #455A64;
-  /*margin-bottom: 8px;*/
+  margin-bottom: 8px;
 }
 
 .read{
