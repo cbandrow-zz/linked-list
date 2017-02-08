@@ -5,7 +5,8 @@
 }
 
 section {
-  height: 750px;
+  min-height: 750px;
+  height: auto;
 }
 
 #input-side{
@@ -31,7 +32,6 @@ header{
   margin: 10px auto 10px auto;
   border: solid 1px #607d8b;
   width: 90%;
-  /*height: 150px;*/
 }
 
 .bookmarks hr {
@@ -52,7 +52,6 @@ input {
 input:focus{
   outline: none;
 }
-
 
 h1 {
   color: #FFFFFF;
@@ -75,7 +74,7 @@ h2 {
 }
 
 a {
-  display: table-cell;
+  display: inline-block;
   color: #607D8B;
   text-decoration: none;
   border-bottom: solid 2px #F2F4F4;
@@ -111,15 +110,13 @@ a:hover{
   background: #fccb5a;
 }
 
-#enter-button:focus {
+#enter-button:focus,
+.read:focus,
+.delete:focus {
   outline: none;
 }
 
-#bottom-bookmark {
-  margin-bottom: 10px;
-}
-
-.read .delete {
+.read, .delete {
   padding: 0px;
   background: none;
   border: none;
@@ -137,6 +134,7 @@ a:hover{
 
 .read-link {
   border-bottom: solid 2px #CFD8DC;
+
 }
 
 .read-button {
