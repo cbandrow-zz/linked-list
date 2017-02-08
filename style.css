@@ -88,7 +88,7 @@ a:hover{
   border-bottom: solid 3px #FFC107;
 }
 
-#enter-button {
+#enter-button, #clear-button {
   background: #FFC107;
   color: #FFFFFF;
   border-style: none;
@@ -100,18 +100,30 @@ a:hover{
   letter-spacing: 1px;
 }
 
-#enter-button:hover {
+#enter-button:hover,
+#clear-button:hover {
   background: #FFD773;
 }
 
-#enter-button:active {
+#enter-button:active,
+#clear-button:active {
   background: #fccb5a;
 }
 
 #enter-button:focus,
 .read:focus,
-.delete:focus {
+.delete:focus,
+#clear-button:focus {
   outline: none;
+}
+
+p{
+  margin-top: 30px;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 400;
+  color: #FFFFFF;
+  letter-spacing: 1px;
 }
 
 .read, .delete {
