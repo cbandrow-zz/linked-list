@@ -1,21 +1,4 @@
-
-// $(document).ready(function(){
-//var initVal = "";
-//     $("#web-title, #web-address").blur(function(){
-//         if ($(this).val() != initVal && $(this).val() != "") {
-//             $("#enter-button").removeAttr("disabled");
-//         } else {
-//             $("#enter-button").attr("disabled", "true");
-//         }
-//     });
-// });
-
-if($("#web-title") === "" || $("#enter-button") === ""){
-  $("#enter-button").attr("disabled", "true");
-} else {
-  $("#enter-button").removeAttr("disabled");
-}
-
+$("#web-title, #web-address").on("keyup", disable);
 
 $('#enter-button').on('click',function() {
   var $webTitle = $('#web-title').val();
@@ -29,6 +12,7 @@ $('#enter-button').on('click',function() {
 
   $('#web-title').val('');
   $('#web-address').val('');
+  disable();
 });
 
 function addData($webAddress, $webTitle){
@@ -38,6 +22,14 @@ function addData($webAddress, $webTitle){
 
   $('#non-entry').text("");
 
+}
+
+function disable(){
+  if($("#web-title").val().length > 0 && $("#web-address").val().length > 0) {
+    $("#enter-button").prop("disabled", false);
+  } else {
+    $("#enter-button").prop("disabled", true);
+  }
 }
 
 $('#display-side').on('click','.read', function(event) {
