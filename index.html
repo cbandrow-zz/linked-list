@@ -7,18 +7,20 @@
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <section id="input-side">
-      <header>
-        <h1>Linked <img src="images/linked-list-logo.svg" /> List</h1>
-      </header>
-      <input type = "text" placeholder="Website Title" id ="web-title" />
-      <input type = "url" placeholder="Website URL" id="web-address" />
-      <button id="enter-button">Enter</button>
-      <button id="clear-button">Clear Bookmarks</button>
-      <p class="bookmark-count">You have <span id="bookmark-count">0</span> bookmarks</p>
-    </section>
-    <section id="display-side">
-    </section>
+    <div id="wrapper">
+      <section id="input-side">
+        <header>
+          <h1 class="flex-class1">Linked <img src="images/linked-list-logo.svg" /> List</h1>
+        </header>
+        <input type = "text" placeholder="Website Title" class="flex-class1" id ="web-title" />
+        <input type = "url" placeholder="Website URL" class="flex-class1" id="web-address" />
+        <button class="flex-class1" id="enter-button">Enter</button>
+        <button class="flex-class1" id="clear-button">Clear Bookmarks</button>
+        <p class="bookmark-count flex-class1">You have <span id="bookmark-count">0</span> bookmarks</p>
+      </section>
+      <section id="display-side">
+      </section>
+    </div>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type ="text/javascript" src="jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="jp.js"></script>
