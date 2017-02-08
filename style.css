@@ -73,7 +73,7 @@ h2 {
 }
 
 a {
-  display: table-cell;
+  display: inline-block;
   color: #607D8B;
   text-decoration: none;
   border-bottom: solid 2px #F2F4F4;
@@ -132,6 +132,7 @@ a:hover{
 
 .read-link {
   border-bottom: solid 2px #CFD8DC;
+
 }
 
 .read-button {
