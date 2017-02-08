@@ -12,7 +12,6 @@
 
 // ---Creates a DIV and adds data-----//
 $('#enter-button').on('click', function (event) {
-  console.log(event.target.id);
   submitData();
 });
 
@@ -23,8 +22,6 @@ function submitData (){
   var webAddress = $('#web-address').val();
   var noWww = webAddress.includes("www");;
   var noHttp = webAddress.includes("http://");
-  console.log(noWww, noHttp);
-
   if (noWww === false && noHttp === false){
     var address = "http://" + "www." + webAddress;
   } else if (noWww === true && noHttp === true){
@@ -35,11 +32,15 @@ function submitData (){
   } else if (noHttp === false){
     var address = "http://" + webAddress;
   }
-  console.log(webTitle + webAddress);
+
+  // webTitle.value = null;
+  // webAddress.value = null;
 
   //Then append with div + data
   $('#display-side').prepend("<div class='bookmarks'><h2>" + webTitle + "</h2><hr><a href='"+ address +"'>" + address + "</a><hr><button class='read'>Read</button><button class='delete'>Delete</button></div>");
 }
+
+
 
 // function evalAddress() {
 //   if (noWww === false && noHttp === false){
