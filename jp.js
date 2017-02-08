@@ -13,9 +13,12 @@ $('#enter-button').on('click',function() {
 $('#display-side').on('click','.read', function(event) {
   console.log("Holy shit reading is fun");
   console.log(event.target);
-  $('.read').toggleClass('read-button');
-  $('.bookmarks').toggleClass('read-bookmark');
-  $('.link').toggleClass('read-link');
+  $(this).closest('.bookmarks').toggleClass('read-bookmark');
+  $(this).closest('.link').toggleClass('read-link');
+  $(this).toggleClass('read-button');
+  // $('.read').toggleClass('read-button');
+  // $('.bookmarks').toggleClass('read-bookmark');
+  // $('.link').toggleClass('read-link');
 
 
   var $readButtonCount = $('.read');
