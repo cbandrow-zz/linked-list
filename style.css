@@ -71,6 +71,7 @@ h2 {
   font-weight: 400;
   margin-top: 5px;
   margin-bottom: 5px;
+  margin-left: 5%;
 }
 
 a {
@@ -80,6 +81,7 @@ a {
   border-bottom: solid 2px #F2F4F4;
   margin-top: 5px;
   margin-bottom: 5px;
+  margin-left: 5%;
 }
 
 a:hover{
