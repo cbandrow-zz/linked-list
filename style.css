@@ -4,9 +4,20 @@
   font-family: "Open Sans", sans-serif;
 }
 
+#wrapper {
+  display: flex;
+}
+
 section {
+  display: flex;
+  flex-direction: column;
   min-height: 750px;
-  height: auto;
+  /*width: 50%;*/
+  /*height: auto;*/
+}
+
+.flex-class {
+
 }
 
 #input-side{
@@ -98,7 +109,16 @@ a:hover{
   border-bottom: solid 3px #FFC107;
 }
 
-#enter-button {
+p{
+  margin-top: 30px;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 400;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+}
+
+#enter-button, #clear-button {
   background: #FFC107;
   color: #FFFFFF;
   border-style: none;
@@ -110,11 +130,13 @@ a:hover{
   letter-spacing: 1px;
 }
 
-#enter-button:hover {
+#enter-button:hover,
+#clear-button:hover {
   background: #FFD773;
 }
 
-#enter-button:active {
+#enter-button:active,
+#clear-button:active {
   background: #fccb5a;
 }
 
@@ -124,13 +146,16 @@ a:hover{
 
 #enter-button:focus,
 .read:focus,
-.delete:focus {
+.delete:focus,
+#clear-button:focus {
   outline: none;
 }
 
 #bottom-bookmark {
   margin-bottom: 10px;
 }
+
+
 
 .read, .delete {
   padding: 0px;
