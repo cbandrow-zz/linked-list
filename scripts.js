@@ -9,7 +9,7 @@ function submitData (){
 
   var webTitle = $('#web-title').val();
   var webAddress = $('#web-address').val();
-  var noWww = webAddress.includes("www");;
+  var noWww = webAddress.includes("www");
   var noHttp = webAddress.includes("http://");
   console.log(noWww, noHttp);
 
