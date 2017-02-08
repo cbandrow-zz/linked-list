@@ -1,9 +1,4 @@
 $('#enter-button').on('click',function() {
-  submitData();
-});
-
-function submitData() {
-
   var $webTitle = $('#web-title').val();
   var $webAddress = $('#web-address').val();
 
@@ -13,5 +8,17 @@ function submitData() {
 
   $('#web-title').val('');
   $('#web-address').val('');
+});
 
-}
+$('#display-side').on('click','.read', function(event) {
+  console.log("Holy shit reading is fun");
+  console.log(event.target);
+  $('.read').css('color', '#F05A28');
+  var $readButtonCount = $('.read');
+  console.log($readButtonCount);
+
+});
+
+$('#display-side').on('click','.delete', function() {
+  console.log("Dum diddy dum diddy delete");
+});
