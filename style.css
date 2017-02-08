@@ -112,7 +112,7 @@ a:hover{
 }
 
 #enter-button:disabled {
-  background: #ffD;
+  background: #dbc695;
 }
 
 #enter-button:focus,
