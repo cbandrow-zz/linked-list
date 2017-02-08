@@ -5,7 +5,8 @@
 }
 
 section {
-  height: 750px;
+  min-height: 750px;
+  height: auto;
 }
 
 #input-side{
@@ -31,7 +32,7 @@ header{
   margin: 10px auto 10px auto;
   border: solid 1px #607d8b;
   width: 90%;
-  /*height: 150px;*/
+  padding-bottom: 7px;
 }
 
 .bookmarks hr {
@@ -52,7 +53,6 @@ input {
 input:focus{
   outline: none;
 }
-
 
 h1 {
   color: #FFFFFF;
@@ -75,18 +75,19 @@ h2 {
 }
 
 a {
-  display: table-cell;
+  display: inline-block;
   color: #607D8B;
   text-decoration: none;
   border-bottom: solid 2px #F2F4F4;
   margin-top: 5px;
   margin-bottom: 5px;
+  margin-left: 25px;
 }
 
 a:hover{
   font-weight: 800;
   color: #455A64;
-  text-decoration: underline;
+  text-decoration: none;
   border-bottom: solid 3px #FFC107;
 }
 
@@ -110,7 +111,13 @@ a:hover{
   background: #fccb5a;
 }
 
-#enter-button:focus {
+#enter-button:disabled {
+  background: #ffD;
+}
+
+#enter-button:focus,
+.read:focus,
+.delete:focus {
   outline: none;
 }
 
@@ -124,11 +131,25 @@ a:hover{
   border: none;
   border-bottom: solid 2px #F2F4F4;
   color: #455A64;
+  /*margin-bottom: 8px;*/
+}
+
+.read{
+  margin-left: 25px;
 }
 
 .delete {
   float: right;
+  margin-right: 25px;
 }
+
+.read:hover, .delete:hover{
+  font-weight: 800;
+  color: #455A64;
+  text-decoration: none;
+  border-bottom: solid 3px #FFC107;
+}
+
 
 .read-bookmark {
   background: #F2F4F4;
@@ -140,4 +161,11 @@ a:hover{
 
 .read-button {
    color: #F05A28;
+}
+
+.read-button:hover {
+   color: #F05A28;
+   font-weight: 800;
+   text-decoration: none;
+   border-bottom: solid 3px #FFC107;
 }

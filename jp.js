@@ -1,10 +1,3 @@
-// To Disable Submit Button By Default
-$("#enter-button").attr('disabled','disabled');
-// When User Fills Out Form Completely
-$("#web-title").keyup(function(){
-  $("#enter-button").removeAttr('disabled');
-});
-
 $('#enter-button').on('click',function() {
   var $webTitle = $('#web-title').val();
   var $webAddress = $('#web-address').val();
@@ -17,11 +10,12 @@ $('#enter-button').on('click',function() {
   $('#web-address').val('');
 });
 
-$('#display-side').on('click', function(event) {
-  // console.log("Holy shit reading is fun");
-  // console.log(event.target);
-  $('.read').closest('.bookmarks').toggleClass('read-button');
-  $('.read').toggleClass('read-bookmark');
+$('#display-side').on('click','.read', function(event) {
+  console.log("Holy shit reading is fun");
+  console.log(event.target);
+  $('.read').toggleClass('read-button');
+  $('.bookmarks').toggleClass('read-bookmark');
+  $('.link').toggleClass('read-link');
 
 
   var $readButtonCount = $('.read');
@@ -32,10 +26,3 @@ $('#display-side').on('click', function(event) {
 $('#display-side').on('click','.delete', function() {
   console.log("Dum diddy dum diddy delete");
 });
-
-
-// window.onload = function() {
-//   disabled();
-// }
-// function disabled(){
-//   $('#display-side').attr(disabled) = true;
