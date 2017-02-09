@@ -4,31 +4,30 @@
   font-family: "Open Sans", sans-serif;
 }
 
-body{
+body {
   width: 100%;
 }
+
 section {
   display: inline-block;
   min-height: 750px;
-  /*width: 50%;*/
-  /*height: auto;*/
 }
 
-#input-side{
+#input-side {
   float: left;
   background-color: #455A64;
   width: 50%;
   display: inline-block;
-
 }
-#display-side{
+
+#display-side {
   display: inline-block;
   background-color: #CFD8DC;
   width: 50%;
   align-content: space-around;
 }
 
-header{
+header {
   width: 100%;
   padding-top: 150px;
 }
@@ -42,7 +41,7 @@ input {
   letter-spacing: 1px;
 }
 
-input:focus{
+input:focus {
   outline: none;
 }
 
@@ -66,7 +65,7 @@ h2 {
   margin-left: 5%;
 }
 
-h3{
+h3 {
   margin-top: 10px;
   text-align: center;
   font-weight: 400;
@@ -83,14 +82,14 @@ a {
   margin-left: 25px;
 }
 
-a:hover{
+a:hover {
   font-weight: 800;
   color: #455A64;
   text-decoration: none;
   border-bottom: solid 3px #FFC107;
 }
 
-p{
+p {
   margin-top: 30px;
   text-align: center;
   font-size: 22px;
@@ -166,8 +165,7 @@ p{
   margin-right: 0px;
 }
 
-.read{
-
+.read {
   margin-right: auto;
   left: 7%;
 }
@@ -177,7 +175,7 @@ p{
   left: 72%;
 }
 
-.read:hover, .delete:hover{
+.read:hover, .delete:hover {
   font-weight: 800;
   color: #455A64;
   text-decoration: none;
@@ -204,21 +202,20 @@ p{
    text-decoration: none;
    border-bottom: solid 3px #FFC107;
 }
-/*@media screen and (max-width : 768px){
-}*/
 
-@media screen and (max-width : 768px){
+
+@media screen and (max-width : 768px) {
   section {
     display: inline-block;
     width: 100%;
   }
 
-  #input-side{
+  #input-side {
     width: 100%;
     min-height: 420px;
   }
 
-  #display-side{
+  #display-side {
     width: 100%;
     min-height: 345px;
   }
@@ -244,6 +241,7 @@ p{
     padding-top: 3px;
     padding-bottom: 3px;
   }
+
   #enter-button, #clear-button {
     width: 270px;
     margin: 20px auto 0 auto;
@@ -269,13 +267,13 @@ p{
     margin-left: 40px;
   }
 
-  h3{
+  h3 {
     margin-top: 10px;
     font-weight: 400;
     font-size: 16px;
   }
 
-  p{
+  p {
     margin-top: 30px;
     font-size: 18px;
   }
@@ -305,7 +303,7 @@ p{
     font-size: 16px;
   }
 
-  .read{
+  .read {
     margin-right: auto;
     left: 7%;
   }
@@ -324,17 +322,17 @@ p{
     width: 100%;
   }
 
-  #input-side{
+  #input-side {
     width: 100%;
     min-height: 240px;
-
   }
+
   #display-side{
     width: 100%;
     min-height: 345px;
   }
 
-  header{
+  header {
     width: 100%;
     padding-top: 5px;
     padding-bottom: 0px;
@@ -373,13 +371,13 @@ p{
     margin-left: 20px;
   }
 
-  h3{
+  h3 {
     margin-top: 10px;
     font-weight: 400;
     font-size: 16px;
   }
 
-  p{
+  p {
     margin-top: 30px;
     font-size: 16px;
   }
