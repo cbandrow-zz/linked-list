@@ -4,32 +4,24 @@
   font-family: "Open Sans", sans-serif;
 }
 
-#wrapper {
-  display: flex;
-}
-
 section {
-  display: flex;
-  flex-direction: column;
+  display: inline-block;
   min-height: 750px;
   /*width: 50%;*/
   /*height: auto;*/
 }
 
-.flex-class {
-
-}
-
 #input-side{
   background-color: #455A64;
   width: 50%;
-  float: left;
+  display: inline-block;
 
 }
 #display-side{
+  display: inline-block;
   background-color: #CFD8DC;
   width: 50%;
-  float: right;
+  align-content: space-around;
 }
 
 header{
@@ -37,26 +29,11 @@ header{
   padding-top: 150px;
 }
 
-.bookmarks {
-  background-color: #ffffff;
-  display: block;
-  margin: 10px auto 10px auto;
-  border: solid 1px #607d8b;
-  width: 90%;
-  padding-bottom: 7px;
-}
-
-.bookmarks hr {
-  color: #cfd8dc;
-  width: 86%;
-  size: 1px;
-}
-
 input {
   display: block;
-  width: 400px;
+  width: 315px;
   margin: 30px auto 0 auto;
-  font-size: 26px;
+  font-size: 22px;
   padding-left: 5px;
   letter-spacing: 1px;
 }
@@ -69,18 +46,18 @@ h1 {
   color: #FFFFFF;
   font-weight: 800;
   text-align: center;
-  font-size: 55px;
+  font-size: 45px;
 }
 
 h1 img {
-  width: 70px;
+  width: 55px;
   vertical-align: middle;
 }
 
 h2 {
   color: #455A64;
   font-weight: 400;
-  margin-top: 5px;
+  margin-top: 15px;
   margin-bottom: 5px;
   margin-left: 5%;
 }
@@ -112,7 +89,7 @@ a:hover{
 p{
   margin-top: 30px;
   text-align: center;
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 400;
   color: #FFFFFF;
   letter-spacing: 1px;
@@ -123,7 +100,8 @@ p{
   color: #FFFFFF;
   border-style: none;
   display: block;
-  width: 410px;
+  width: 325px;
+  font-weight: 800;
   margin: 30px auto 0 auto;
   font-size: 26px;
   padding-left: 5px;
@@ -155,24 +133,43 @@ p{
   margin-bottom: 10px;
 }
 
+.bookmarks {
+  background-color: #ffffff;
+  display: block;
+  margin: 10px auto 10px auto;
+  border: solid 1px #607d8b;
+  width: 90%;
+  padding-bottom: 7px;
+}
 
+.bookmarks hr {
+  color: #cfd8dc;
+  width: 86%;
+  size: 1px;
+}
 
 .read, .delete {
+  position: relative;
+  display: inline;
   padding: 0px;
   background: none;
   border: none;
   border-bottom: solid 2px #F2F4F4;
   color: #455A64;
   margin-bottom: 8px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 .read{
-  margin-left: 25px;
+
+  margin-right: auto;
+  left: 25px;
 }
 
 .delete {
-  float: right;
-  margin-right: 25px;
+  margin-left: auto;
+  left: 185px;
 }
 
 .read:hover, .delete:hover{
@@ -188,8 +185,9 @@ p{
 }
 
 .read-link {
-  border-bottom: solid 2px #CFD8DC;
-
+  text-decoration: none;
+  border-bottom: solid 2px;
+  border-bottom-color: #CFD8DC;
 }
 
 .read-button {
@@ -201,4 +199,195 @@ p{
    font-weight: 800;
    text-decoration: none;
    border-bottom: solid 3px #FFC107;
+}
+
+@media screen and (max-width : 768px){
+
+
+    section {
+      display: inline-block;
+      width: 100%;
+    }
+
+    #input-side{
+      width: 100%;
+      min-height: 240px;
+
+    }
+    #display-side{
+      width: 100%;
+      min-height: 345px;
+    }
+
+    header{
+      width: 100%;
+      padding-top: 5px;
+      padding-bottom: 0px;
+    }
+
+    input {
+      width: 265px;
+      margin: 17px auto 0 auto;
+      font-size: 22px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+    }
+
+    #enter-button, #clear-button {
+
+      width: 275px;
+      margin: 20px auto 0 auto;
+      font-size: 18px;
+      padding-left: 5px;
+      padding-top: 6px;
+      padding-bottom: 6px;
+    }
+
+    h1 {
+      font-size: 25px;
+      margin-bottom: 25px;
+    }
+
+    h1 img {
+      width: 35px;
+    }
+
+    h2 {
+      font-size: 1.25em;
+      margin-top: 13px;
+      margin-bottom: 5px;
+      margin-left: 20px;
+    }
+
+    h3{
+      margin-top: 10px;
+      font-weight: 400;
+      font-size: 16px;
+    }
+
+    p{
+      margin-top: 30px;
+      font-size: 16px;
+    }
+
+    a {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-left: 20px;
+      font-size: 16px;
+    }
+
+    .bookmarks {
+      display: block;
+      margin: 10px auto 10px auto;
+      width: 90%;
+      padding-bottom: 7px;
+    }
+
+    .bookmarks hr {
+      width: 245px;
+      size: 1px;
+    }
+
+    .read, .delete {
+      font-size: 14px;
+    }
+
+  }
+
+
+
+}
+
+@media screen and (max-width : 320px){
+
+  section {
+    display: inline-block;
+    width: 100%;
+  }
+
+  #input-side{
+    width: 100%;
+    min-height: 240px;
+
+  }
+  #display-side{
+    width: 100%;
+    min-height: 345px;
+  }
+
+  header{
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 0px;
+  }
+
+  input {
+    width: 265px;
+    margin: 17px auto 0 auto;
+    font-size: 22px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+
+  #enter-button, #clear-button {
+
+    width: 275px;
+    margin: 20px auto 0 auto;
+    font-size: 18px;
+    padding-left: 5px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  h1 {
+    font-size: 25px;
+    margin-bottom: 25px;
+  }
+
+  h1 img {
+    width: 35px;
+  }
+
+  h2 {
+    font-size: 1.25em;
+    margin-top: 13px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+  }
+
+  h3{
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  p{
+    margin-top: 30px;
+    font-size: 16px;
+  }
+
+  a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    font-size: 16px;
+  }
+
+  .bookmarks {
+    display: block;
+    margin: 10px auto 10px auto;
+    width: 90%;
+    padding-bottom: 7px;
+  }
+
+  .bookmarks hr {
+    width: 245px;
+    size: 1px;
+  }
+
+  .read, .delete {
+    font-size: 14px;
+  }
+
 }
