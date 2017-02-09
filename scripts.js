@@ -3,22 +3,18 @@ $("#web-title, #web-address").on("keyup", disable);
 $('#enter-button').on('click',function() {
   var $webTitle = $('#web-title').val();
   var $webAddress = $('#web-address').val();
-
   if ($webTitle ==="" || $webAddress===""){
     $('#non-entry').text("Try entering a valid site and URL");
-  } else {
+  }
+  else {
     addData($webAddress, $webTitle);
   }
-
   $('#web-title').val('');
   $('#web-address').val('');
   disable();
 });
 
-function bookmarkCount() {
-var $bookmarkCount = $('.bookmarks');
-$('#bookmark-count').text($bookmarkCount.length);
-}
+
 
 function addData($webAddress, $webTitle){
   $webAddress = $webAddress.includes("http://") ? $webAddress :  $webAddress.includes("www") ? "http://" + $webAddress : "http://" + "www." + $webAddress;
@@ -27,16 +23,9 @@ function addData($webAddress, $webTitle){
 
   bookmarkCount();
   $('#non-entry').text("");
-
 }
 
-function disable(){
-  if($("#web-title").val().length > 0 && $("#web-address").val().length > 0) {
-    $("#enter-button").prop("disabled", false);
-  } else {
-    $("#enter-button").prop("disabled", true);
-  }
-}
+
 
 $('#display-side').on('click','.read', function(event) {
   $(this).closest('.bookmarks').toggleClass('read-bookmark');
@@ -55,3 +44,16 @@ $('#clear-button').on('click', function(event) {
   disable();
   bookmarkCount();
 });
+
+function disable(){
+  if($("#web-title").val().length > 0 && $("#web-address").val().length > 0) {
+    $("#enter-button").prop("disabled", false);
+  } else {
+    $("#enter-button").prop("disabled", true);
+  }
+}
+
+function bookmarkCount() {
+var $bookmarkCount = $('.bookmarks');
+$('#bookmark-count').text($bookmarkCount.length);
+}
