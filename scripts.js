@@ -1,68 +1,57 @@
+$("#web-title, #web-address").on("keyup", disable);
 
-$('#enter-button').on('click', function (event) {
-  console.log(event.target.id);
-  submitData();
+$('#enter-button').on('click',function() {
+  var $webTitle = $('#web-title').val();
+  var $webAddress = $('#web-address').val();
+
+  if ($webTitle ==="" || $webAddress===""){
+    $('#non-entry').text("Try entering a valid site and URL");
+  } else {
+    addData($webAddress, $webTitle);
+  }
+
+  $('#web-title').val('');
+  $('#web-address').val('');
+  disable();
 });
 
-function submitData (){
-
-
-  var webTitle = $('#web-title').val();
-  var webAddress = $('#web-address').val();
-  var noWww = webAddress.includes("www");
-  var noHttp = webAddress.includes("http://");
-  console.log(noWww, noHttp);
-
-  if (noWww === false && noHttp === false){
-    var address = "http://" + "www." + webAddress;
-  } else if (noWww === true && noHttp === true){
-    var address = webAddress;
-  } else if (noWww === false){
-    var address = "www." + webAddress;
-    var address = webAddress.replace("http://", "http://www.")
-  } else if (noHttp === false){
-    var address = "http://" + webAddress;
-  }
-  console.log(webTitle + webAddress);
-
-
-  $('#display-side').append("<div class='bookmarks'><h2>" + webTitle + "</h2><hr><a href='"+ address +"'>" + address + "</a><hr><button class='read'>Read</button><button class='delete'>Delete</button></div>");
+function bookmarkCount() {
+var $bookmarkCount = $('.bookmarks');
+$('#bookmark-count').text($bookmarkCount.length);
 }
 
-function evalAddress() {
-  if (noWww === false && noHttp === false){
-    var address = "http://" + "www." + webAddress;
-  } else if (noWww === true && noHttp === true){
-    var address = webAddress;
-  } else if (noWww === false){
-    var address = "www." + webAddress;
-    var address = webAddress.replace("http://", "http://www.")
-  } else if (noHttp === false){
-    var address = "http://" + webAddress;
+function addData($webAddress, $webTitle){
+  $webAddress = $webAddress.includes("http://") ? $webAddress :  $webAddress.includes("www") ? "http://" + $webAddress : "http://" + "www." + $webAddress;
+
+  $('#display-side').prepend("<div class='bookmarks'><h2>" + $webTitle + "</h2><hr><a class='link' target='_blank' href='" + $webAddress + "'>" + $webAddress + "</a><hr><button class='read'>Read</button><button class='delete'>Delete</button></div>");
+
+  bookmarkCount();
+  $('#non-entry').text("");
+
+}
+
+function disable(){
+  if($("#web-title").val().length > 0 && $("#web-address").val().length > 0) {
+    $("#enter-button").prop("disabled", false);
+  } else {
+    $("#enter-button").prop("disabled", true);
   }
 }
 
+$('#display-side').on('click','.read', function(event) {
+  $(this).closest('.bookmarks').toggleClass('read-bookmark');
+  $(this).closest('.link').toggleClass('read-link');
+  $(this).toggleClass('read-button');
 
-$('#read-button-1').on('click', function () {
-  $('#read-button-1').parent().toggleClass('read-bookmark');
-  $('#a-1').toggleClass('read-link');
-  $('#read-button-1').toggleClass('read-button');
 });
 
-$('#read-button-2').on('click', function () {
-  $('#read-button-2').parent().toggleClass('read-bookmark');
-  $('#a-2').toggleClass('read-link');
-  $('#read-button-2').toggleClass('read-button');
+$('#display-side').on('click','.delete', function(event) {
+  $(this).closest('.bookmarks').remove();
+  bookmarkCount();
 });
 
-$('#read-button-3').on('click', function () {
-  $('#read-button-3').parent().toggleClass('read-bookmark');
-  $('#a-3').toggleClass('read-link');
-  $('#read-button-3').toggleClass('read-button');
-});
-
-$('#read-button-4').on('click', function () {
-  $('#read-button-4').parent().toggleClass('read-bookmark');
-  $('#a-4').toggleClass('read-link');
-  $('#read-button-4').toggleClass('read-button');
+$('#clear-button').on('click', function(event) {
+  $('.bookmarks').remove();
+  disable();
+  bookmarkCount();
 });
