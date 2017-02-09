@@ -54,5 +54,4 @@ $('#clear-button').on('click', function(event) {
   $('.bookmarks').remove();
   disable();
   bookmarkCount();
-
 });
