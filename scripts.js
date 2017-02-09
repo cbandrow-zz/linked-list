@@ -16,8 +16,8 @@ $('#enter-button').on('click',function() {
 });
 
 function bookmarkCount() {
-var $bookmarkCount = $('.bookmarks');
-$('#bookmark-count').text($bookmarkCount.length);
+  var $bookmarkCount = $('.bookmarks');
+  $('#bookmark-count').text($bookmarkCount.length);
 }
 
 function addData($webAddress, $webTitle){
