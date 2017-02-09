@@ -15,7 +15,6 @@ $('#enter-button').on('click',function() {
 });
 
 
-
 function addData($webAddress, $webTitle){
   $webAddress = $webAddress.includes("http://") ? $webAddress :  $webAddress.includes("www") ? "http://" + $webAddress : "http://" + "www." + $webAddress;
 
