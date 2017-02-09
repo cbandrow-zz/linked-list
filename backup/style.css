@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,800');
+
+*{
+  font-family: "Open Sans", sans-serif;
+}
+
+#wrapper {
+  display: flex;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  min-height: 750px;
+  /*width: 50%;*/
+  /*height: auto;*/
+}
+
+.flex-class {
+
+}
+
+#input-side{
+  background-color: #455A64;
+  width: 50%;
+  float: left;
+
+}
+#display-side{
+  background-color: #CFD8DC;
+  width: 50%;
+  float: right;
+}
+
+header{
+  width: 100%;
+  padding-top: 150px;
+}
+
+.bookmarks {
+  background-color: #ffffff;
+  display: block;
+  margin: 10px auto 10px auto;
+  border: solid 1px #607d8b;
+  width: 90%;
+}
+
+.bookmarks hr {
+  color: #cfd8dc;
+  width: 86%;
+  size: 1px;
+}
+
+input {
+  display: block;
+  width: 400px;
+  margin: 30px auto 0 auto;
+  font-size: 26px;
+  padding-left: 5px;
+  letter-spacing: 1px;
+}
+
+input:focus{
+  outline: none;
+}
+
+h1 {
+  color: #FFFFFF;
+  font-weight: 800;
+  text-align: center;
+  font-size: 55px;
+}
+
+h1 img {
+  width: 70px;
+  vertical-align: middle;
+}
+
+h2 {
+  color: #455A64;
+  font-weight: 400;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+a {
+  display: inline-block;
+  color: #607D8B;
+  text-decoration: none;
+  border-bottom: solid 2px #F2F4F4;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+a:hover{
+  font-weight: 800;
+  color: #455A64;
+  text-decoration: underline;
+  border-bottom: solid 3px #FFC107;
+}
+
+#enter-button, #clear-button {
+  background: #FFC107;
+  color: #FFFFFF;
+  border-style: none;
+  display: block;
+  width: 410px;
+  margin: 30px auto 0 auto;
+  font-size: 26px;
+  padding-left: 5px;
+  letter-spacing: 1px;
+}
+
+#enter-button:hover,
+#clear-button:hover {
+  background: #FFD773;
+}
+
+#enter-button:active,
+#clear-button:active {
+  background: #fccb5a;
+}
+
+#enter-button:focus,
+.read:focus,
+.delete:focus,
+#clear-button:focus {
+  outline: none;
+}
+
+p{
+  margin-top: 30px;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 400;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+}
+
+.read, .delete {
+  padding: 0px;
+  background: none;
+  border: none;
+  border-bottom: solid 2px #F2F4F4;
+  color: #455A64;
+}
+
+.delete {
+  float: right;
+}
+
+.read-bookmark {
+  background: #F2F4F4;
+}
+
+.read-link {
+  border-bottom: solid 2px #CFD8DC;
+
+}
+
+.read-button {
+   color: #F05A28;
+}
