@@ -122,7 +122,8 @@ p{
   background: #fccb5a;
 }
 
-#enter-button:disabled {
+#enter-button:disabled,
+#clear-button:disabled {
   background: #dbc695;
 }
 
